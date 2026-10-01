@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ت — تطبيق حرف التاء</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--accent:#22d3ee;--accent2:#facc15;--text:#f1f5f9;--muted:#94a3b8}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#1e3a5f,var(--bg));color:var(--text);min-height:100vh}
+header{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+.logo{font-weight:800;font-size:22px}
+.logo span{color:var(--accent)}
+.badge{background:#0ea5e9;color:#fff;padding:6px 14px;border-radius:999px;font-size:14px}
+main{max-width:1100px;margin:0 auto;padding:12px 24px 48px;display:grid;gap:20px}
+@media(min-width:900px){main{grid-template-columns:1.1fr .9fr}}
+.hero{background:linear-gradient(135deg,#0ea5e9,#6366f1);border-radius:24px;padding:36px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.big-letter{font-size:140px;line-height:1;background:#fff;color:#0f172a;width:200px;height:200px;display:flex;align-items:center;justify-content:center;border-radius:32px;margin:0 auto 16px;box-shadow:inset 0 -8px 0 rgba(0,0,0,.12)}
+.hero h1{margin:0 0 8px;font-size:32px}
+.hero p{margin:0 0 18px;color:#e0f2fe}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+button{cursor:pointer;border:0;border-radius:12px;padding:12px 20px;font-size:16px;font-weight:700}
+.btn-dark{background:#0f172a;color:#fff}
+.btn-light{background:var(--accent2);color:#0f172a}
+.card{background:var(--card);border:1px solid #334155;border-radius:20px;padding:22px}
+.card h2{margin:0 0 12px;font-size:20px;color:var(--accent)}
+.forms{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
+.form{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:12px 6px}
+.form b{display:block;font-size:36px}
+.form small{color:var(--muted)}
+.examples{display:grid;gap:10px}
+.ex{display:flex;align-items:center;gap:12px;background:#0f172a;border:1px solid #334155;border-radius:14px;padding:10px 14px}
+.ex .emoji{font-size:32px}
+.ex b{font-size:18px}
+.ex small{display:block;color:var(--muted)}
+.quiz{grid-column:1/-1}
+.quiz-options{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.opt{background:#0f172a;border:2px solid #334155;color:var(--text);border-radius:12px;padding:12px 18px;font-size:18px}
+.opt.correct{border-color:#22c55e;background:#052e16}
+.opt.wrong{border-color:#ef4444;background:#450a0a}
+#quiz-msg{margin-top:12px;min-height:24px;font-weight:700}
+footer{text-align:center;color:var(--muted);padding:20px;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ت <span>• حرف التاء</span></div>
+<div class="badge">تطبيق تعليمي تفاعلي</div>
+</header>
+<main>
+<section class="hero">
+<div class="big-letter" aria-label="حرف التاء">ت</div>
+<h1>هيا نتعلم حرف التاء!</h1>
+<p>الحرف الثالث في الأبجدية العربية • صوته “تَ” مثل تُفاحة</p>
+<div class="btn-row">
+<button class="btn-dark" id="speak">🔊 استمع للنطق</button>
+<button class="btn-light" id="trace-btn">✏️ تتبع الحرف</button>
+</div>
+</section>
+<section class="card">
+<h2>أشكال الحرف</h2>
+<div class="forms">
+<div class="form"><b>ت</b><small>منفصل</small></div>
+<div class="form"><b>تـ</b><small>أول الكلمة</small></div>
+<div class="form"><b>ـتـ</b><small>وسط الكلمة</small></div>
+<div class="form"><b>ـت</b><small>آخر الكلمة</small></div>
+</div>
+<div style="margin-top:14px;color:#cbd5e1;line-height:1.9">التاء المبسوطة <b>ت</b> تختلف عن التاء المربوطة <b>ة</b>. التاء المربوطة تأتي في آخر الأسماء المؤنثة مثل مدرسة، بينما المبسوطة تأتي في كل المواضع.</div>
+</section>
+<section class="card">
+<h2>كلمات بحرف التاء</h2>
+<div class="examples">
+<div class="ex"><div class="emoji">🍎</div><div><b>تُفاحة</b><small>ت في أول الكلمة</small></div></div>
+<div class="ex"><div class="emoji">👑</div><div><b>تاج</b><small>ت في أول الكلمة</small></div></div>
+<div class="ex"><div class="emoji">🌴</div><div><b>تَمْر</b><small>ت في أول الكلمة</small></div></div>
+<div class="ex"><div class="emoji">🐊</div><div><b>تِمْساح</b><small>ت في أول الكلمة</small></div></div>
+<div class="ex"><div class="emoji">🏠</div><div><b>بَيْت</b><small>ت في آخر الكلمة</small></div></div>
+</div>
+</section>
+<section class="card quiz">
+<h2>اختبار سريع: أين حرف التاء؟</h2>
+<div>اختر الكلمة التي تبدأ بحرف التاء:</div>
+<div class="quiz-options">
+<button class="opt" data-ok="1">تفاحة 🍎</button>
+<button class="opt" data-ok="0">موز 🍌</button>
+<button class="opt" data-ok="0">عنب 🍇</button>
+<button class="opt" data-ok="0">ليمون 🍋</button>
+</div>
+<div id="quiz-msg">اضغط على الإجابة الصحيحة � dragging</div>
+</section>
+</main>
+<footer>ت (App) • صُنع للتعلم الممتع • يعمل دون إنترنت</footer>
+<script>
+document.getElementById('speak').addEventListener('click',()=>{
+  try{
+    const u=new SpeechSynthesisUtterance('تاء، تُفاحة، تاج، تمر');
+    u.lang='ar-SA';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u);
+  }catch(e){}
+});
+document.getElementById('trace-btn').addEventListener('click',()=>{
+  document.querySelector('.big-letter').animate(
+    [{transform:'scale(1)'},{transform:'scale(1.08) rotate(-2deg)'},{transform:'scale(1)'}],
+    {duration:600,iterations:2});
+});
+document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
+  const msg=document.getElementById('quiz-msg');
+  document.querySelectorAll('.opt').forEach(x=>x.classList.remove('correct','wrong'));
+  if(b.dataset.ok==='1'){b.classList.add('correct');msg.textContent='🎉 أحسنت! تفاحة تبدأ بحرف التاء';msg.style.color='#22c55e';}
+  else{b.classList.add('wrong');msg.textContent='❌ حاول مرة أخرى!';msg.style.color='#ef4444';}
+}));
+</script>
+</body>
+</html>
